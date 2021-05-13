@@ -1,0 +1,64 @@
+{% extends 'default.html' %}
+{% load crispy_forms_tags %}
+{%block title%} Catálogo {%endblock%}
+{%block content%}
+
+<div class="offset-1 col-10 list-div">
+    <h1>Catálogo Confeitaria</h1>
+    <a href="{%url 'pedido'%}">
+        <div class="col-3 add-div">
+            <i class="fas fa-plus"></i>Realizar Pedido
+        </div>
+    </a>
+    <div class="col-9 search-div">
+        <form method="GET" id="search-form">
+            <input class="form-control" type="text" id="search" name="search" placeholder="Digite o nome do ítem desejado " value ="{{ request.GET.search}}">
+            
+        </form>
+        
+        
+    </div>
+    <ul class="task-list">
+        {% for Produto1 in produtos %}
+        <li class="task-item">
+            <span><a href= "produtos1/{{Produto1.id}}">{{Produto1.Nome}}</a></aspan>
+            
+        </li>
+        {% endfor %}
+    </ul>
+    <div class="pagination">
+        <span class="satep-links">
+            {% if produtos.has_previous %}
+                <a href="?page={{ produtos.previus_page_number}}"><i class="fas fa-arrow-left"></i></a>
+            {%endif%}
+
+            {% if produtos.paginator.num_pages %}
+            <span class="current"> 
+                {{produtos.number}} de {{produtos.paginator.num_pages}}
+            </span>
+            {% endif %}
+
+            {% if produtos.has_next %}
+                <a href="?page={{ produtos.next_page_number}}"><i class="fas fa-arrow-right"></i></a>
+            {%endif%}
+
+        </span>
+
+    </div>
+    
+</div>
+{%endblock%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

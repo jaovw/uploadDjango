@@ -1,0 +1,92 @@
+{% extends 'default.html' %}
+{% load crispy_forms_tags %}
+{%block title%} Catálogo {%endblock%}
+{%block content%}
+
+    <br>
+    <div class="row">
+            <div class="cool-md">
+                <div class="card card-body">
+                    <h5>Lista</h5>
+
+                </div>
+                <div class="card card-body">
+                    <table class="table">
+                        <tr>
+                            <th>Produto</th>
+                           
+                            <th>Loja 19</th>
+                            <th>Loja 27</th>
+                            <th>Loja 35</th>
+                            <th>Loja 43</th>
+                            <th>Loja 78</th>
+                            <th>Loja 86</th>
+                            <th>Loja 94</th>
+                            <th>Loja 108</th>
+                            <th>Loja 116</th>
+                            <th>Loja 124</th>
+                            <th>Loja 140</th>
+                            <th>Loja 159</th>
+                            <th>Loja 16</th>
+                            <th>Loja 17</th>
+                            <th>Loja 18</th>
+                            <th>TOTAL</th>
+                          
+                        </tr>
+                        
+                        
+                        {%for c in prod%}
+                        <tr>
+                            
+                            <td>{{c.Nome}}</td>
+                            <td>{{l1}}</td>
+                            <td>{{c.nomeProduto}}</td>
+                            <td>{{teste}}</td>
+                            <td>{{1}}</td>
+                            <td>{{1}}</td>
+                            <td>{{1}}</td>
+                            <td>{{1}}</td>
+                            <td>{{1}}</td>
+                            <td>{{1}}</td>
+                            <td>{{1}}</td>
+                            <td>{{1}}</td>
+                            <td>{{1}}</td>
+                            <td>{{1}}</td>
+                            <td>{{1}}</td>
+                            <td>{{1}}</td>
+                            <td>{{ped}}</td>
+                        {%endfor%}   
+                          
+                        </tr>
+                        
+                        
+                    
+                       
+                        
+                        
+                        
+                            
+                
+                       
+
+                    
+
+                           
+                            
+                        
+                        
+                        
+
+                        
+                        
+                        
+                    </table>
+                </div>
+            </div>
+
+    </div>
+
+
+
+
+{%endblock%}

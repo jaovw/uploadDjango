@@ -1,0 +1,196 @@
+.conteiner.fluid{
+    padding : 0;
+}
+.conteiner.fluid.row{
+    margin: 0;
+}
+/* mudando a barra de navegação */
+.btn.btn-outline-warning.me-2{
+    color: white;
+    border-color: white;
+    background-color: #783c00;
+}
+.nav-link{
+    text-decoration-color: ivory;
+    text-decoration: none;
+}
+.navbar {
+
+    border-bottom: 1px solid #783c00;
+    margin-bottom: 20px;
+}
+.navbar-nav {
+    margin: auto;
+}
+.navbar-brand {
+    font-weight: bold;
+}
+.navbar-ligth, .navbar-nav, a.navbar-link {
+    color: black;
+    letter-spacing: 1px;
+}
+
+/*Botão adicionar*/
+
+.add-div{
+    background-color: #3476e2;
+    cursor: pointer;
+    display: inline-block;
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    margin-right: 25px;
+
+}
+.fas.fa-plus{
+    color: #fff;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+/*ícone de busca*/
+
+
+.fas.fa-search {
+    position: relative;
+    top: 12px;
+    right: 26px;
+    cursor: pointer;
+   
+}
+.search-div{
+    padding: 0px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+/*Conteudo (catalogo)*/
+
+.list-div{
+    padding: 0;
+}
+.task-list{
+    padding-left: 0;
+}
+.task-item{
+    list-style: none;
+    font-size: 20px;
+    height: 50px;
+    padding-top: 10px;
+    border-bottom: 1px dashed #ccc;
+    text-decoration:none;
+}
+.far.fa-check-circle{
+    cursor:pointer; 
+    margin: 5px;
+    font-size: 20px;
+    float:right;
+
+}
+.fas.fa-trash{
+    cursor: pointer;
+    position: relative;
+    float: right;
+    margin-top: 0px;
+    margin-bottom: none;
+    
+}
+.fas.fa-check-circle{
+    color: #13c43f;
+}
+.fas.fa-trash{
+    color: #db1e47;
+}
+.fas.fa-edit{
+    color: #13c43f
+    ;
+}
+
+/*Botão de realizar o peidido*/
+
+.btn.btn-sucess{
+    cursor: pointer;
+    color: #db1e47;
+    background-color: black;
+}
+/* Rodapé */
+
+footer {
+
+    background-color: black;
+    height: 300px;
+    border-top: 2px solid #202020;
+}
+
+footer h1 {
+    color: #f5f5f5f5;
+    text-align: center;
+    top: 50%;
+    position: relative;
+}
+
+/* Mensagem */
+
+ul.messages{
+    padding: 0;
+}
+ul.massages li{
+    list-style: none;
+}
+
+/* Paginação */ 
+
+.pagination{
+    margin-bottom: 20px;
+}
+.step-links{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.step-links .current{
+    margin-right: 5px;
+    margin-left: 5px;
+
+}   
+
+/* Login */
+
+.auth-card{
+    margin-bottom: 30px;
+}
+
+/*Redirecionamento*/
+
+.change-form-p{
+    margin-top: 30px;
+    text-align: center;
+}
+
+/*Botão csv*/
+
+.btn.btn-sucess{
+    position: relative;
+    float: right;
+    
+}
+/* Botão drop
+.dropdown-menu, .btn.btn-secondary.dropdown-toggle{
+    position: relative;
+    
+    padding: 0px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+    text-decoration-color: ivory;
+    text-decoration: none;
+  
+}
+
+.dropdown{
+    padding: 0px;
+    margin-top: 200px;
+    margin-bottom: 500px;
+    display: inline-block;
+}*/

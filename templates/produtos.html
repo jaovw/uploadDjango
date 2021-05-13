@@ -1,0 +1,9 @@
+{% extends "default.html" %}
+{% load crispy_forms_tags %}
+{%block title%}Info de {{produtos.Nome}}{%endblock%}
+{%block content%}
+<h1>{{produtos.Nome}}</h1>
+<p>{{produtos.Descrição}}</p>
+<p>{{produtos.Código}}</p>
+<p>{{produtos.Ramo}}</p>
+{%endblock%}

@@ -1,0 +1,33 @@
+{% extends 'default.html' %}
+{% load crispy_forms_tags %}
+{%block title%} Envio de email {%endblock%}
+{%block content%}
+
+
+<div class="container-fluid">
+    <center><h1>Confirmação por email </h1>
+        <div class="container">
+        <ul class="messages">
+            {%for msg in messages%}
+            <ul class="alert alert-{{msg.level_tag}}" role="alert">
+               
+                {{msg.message}}
+                
+            </ul>
+            {%endfor%}
+    
+        </ul>
+        </div>
+    <form method="POST">
+        {% csrf_token %}
+        
+        <input type="text" style="font-size: 20px; position: relative; width: 500px;" name="mail" placeholder="exemplo@superfestval.com.br">
+        <input style="font-size: 20px;font-weight: 100; margin-left: 30px; margin-bottom: 10px;" type="submit" value="enviar" class="btn btn-success">
+        
+    </form>
+
+</center>
+</div>
+
+
+{%endblock%}

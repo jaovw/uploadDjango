@@ -1,0 +1,58 @@
+{%extends "default.html"%}
+{% load crispy_forms_tags %}
+{%block title%} Pedidos {% endblock %}
+{%block content%}
+
+<div class="offset-1 col-10 list-div">
+    <h1>Lista de Pedidos</h1>
+    <div class="task-item offset-5 col-5">
+        <a class="btn btn-sucess" href="{% url 'xls' %}" style="background-color:#32CD32; color: #f0f0f0; font-size: 17px; font-weight: bolder;">Export </a>
+        <a class="btn btn-sucess" href="{% url 'formulario' %}" style="color: white; font-weight: bolder; font-size: 17px; background-color: #696969;">Email </a>
+        <a class="btn btn-secundary" href="{%url 'pedido'%}" style="background-color: #3476e2; color: white; font-weight: bolder; font-size: 17px;">Realizar pedido</a>
+    </div>
+    {% if messages%}
+        <ul class="messages">
+            {%for message in messages %}
+                <li {% if message.tags %} class="alert alert-{{message.tags}}"{%endif%}>{{message}}</li>
+            {% endfor %}
+
+        </ul>
+    
+    {%endif%}
+   
+        {% for Pedido in pedidos_lista %}
+        <li class="task-item">
+            <p>Qtd: {{Pedido.Quantidade}}, {{Pedido.Nome}}</p>  
+            <a href="delete/{{Pedido.id}}" class="delete-btn col-1"><span><i class="fas fa-trash" style="margin-inline: 50px; "></i></span></a>
+           
+        </li>
+        {% endfor %}
+    
+    <div class="pagination">
+        <span class="satep-links">
+            {% if pedidos_lista.has_previous %}
+                <a href="?page={{ pedidos_lista.previus_page_number}}"><i class="fas fa-arrow-left"></i></a>
+            {%endif%}
+
+            {% if pedidos_lista.paginator.num_pages %}
+            <span class="current"> 
+                {{pedidos_lista.number}} de {{pedidos_lista.paginator.num_pages}}
+            </span>
+            {% endif %}
+
+            {% if pedidos_lista.has_next %}
+                <a href="?page={{ pedidos_lista.next_page_number}}"><i class="fas fa-arrow-right"></i></a>
+            {%endif%}
+
+        </span>
+
+    </div>
+    
+</div>
+      
+
+
+
+
+
+{%endblock%}

@@ -1,0 +1,26 @@
+{%extends "default.html"%}
+{% load crispy_forms_tags %}
+{%block title%} Pedidos {% endblock %}
+{%block content%}
+<div class="container">
+    <h1> REALIZAÇÃO DE PEDIDOS</h1>
+    <ul class="messages">
+        {%for msg in messages%}
+        <li class="alert alert-{{msg.level_tag}}" role="alert">
+           
+            {{msg.message}}
+    
+        </li>
+        {%endfor%}
+
+    </ul>
+    <div class="container-fluid" style="width: 600px;">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form|crispy}}
+            <input type="submit"  class="btn btn-success" value="realizar">
+        </form>
+    </div>
+    <p>Realize seu pedido </p>
+</div>
+{%endblock%}
